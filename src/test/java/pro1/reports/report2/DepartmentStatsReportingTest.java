@@ -17,7 +17,7 @@ public class DepartmentStatsReportingTest
         var actual = DepartmentStatsReporting.GetReport(new TestDataSource(), "2025", "KIKM");
         var actualJson = new Gson().toJson(actual);
         var expectedJson = ResourcesUtils.readResourceFile("expectedReports/departmentStats_2025_KIKM.json");
-        JSONAssert.assertEquals(
+        JSONAssert.assertEquals( // v todo reportu 2 bylo napsané ať se upraví testovací data, tak jsem to udělal.
                 expectedJson,
                 actualJson,
                 JSONCompareMode.LENIENT);
